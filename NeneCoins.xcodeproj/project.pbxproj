@@ -7,23 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5BC3A0FB27B2948000613145 /* SelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC3A0FA27B2948000613145 /* SelectionView.swift */; };
+		5BC3A0FD27B29C2E00613145 /* SelectionTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC3A0FC27B29C2E00613145 /* SelectionTableViewDataSource.swift */; };
 		5BF74DC427B1E5FC00E60AA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF74DC327B1E5FC00E60AA4 /* AppDelegate.swift */; };
 		5BF74DC627B1E5FC00E60AA4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF74DC527B1E5FC00E60AA4 /* SceneDelegate.swift */; };
-		5BF74DC827B1E5FC00E60AA4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF74DC727B1E5FC00E60AA4 /* ViewController.swift */; };
-		5BF74DCB27B1E5FC00E60AA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BF74DC927B1E5FC00E60AA4 /* Main.storyboard */; };
+		5BF74DC827B1E5FC00E60AA4 /* ConversionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF74DC727B1E5FC00E60AA4 /* ConversionViewController.swift */; };
 		5BF74DCD27B1E5FE00E60AA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BF74DCC27B1E5FE00E60AA4 /* Assets.xcassets */; };
 		5BF74DD027B1E5FE00E60AA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BF74DCE27B1E5FE00E60AA4 /* LaunchScreen.storyboard */; };
+		5BF74DDC27B1E75400E60AA4 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF74DDB27B1E75400E60AA4 /* Coin.swift */; };
+		5BF74DDE27B1E78900E60AA4 /* CoinRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF74DDD27B1E78900E60AA4 /* CoinRepository.swift */; };
+		5BF74DE127B1E86E00E60AA4 /* ConversionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF74DE027B1E86E00E60AA4 /* ConversionView.swift */; };
+		5BF74DE527B1E8A800E60AA4 /* ConversionTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF74DE427B1E8A800E60AA4 /* ConversionTableViewDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5BC3A0FA27B2948000613145 /* SelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionView.swift; sourceTree = "<group>"; };
+		5BC3A0FC27B29C2E00613145 /* SelectionTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionTableViewDataSource.swift; sourceTree = "<group>"; };
 		5BF74DC027B1E5FC00E60AA4 /* NeneCoins.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NeneCoins.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BF74DC327B1E5FC00E60AA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BF74DC527B1E5FC00E60AA4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5BF74DC727B1E5FC00E60AA4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5BF74DCA27B1E5FC00E60AA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5BF74DC727B1E5FC00E60AA4 /* ConversionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionViewController.swift; sourceTree = "<group>"; };
 		5BF74DCC27B1E5FE00E60AA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5BF74DCF27B1E5FE00E60AA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5BF74DD127B1E5FE00E60AA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BF74DDB27B1E75400E60AA4 /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
+		5BF74DDD27B1E78900E60AA4 /* CoinRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinRepository.swift; sourceTree = "<group>"; };
+		5BF74DE027B1E86E00E60AA4 /* ConversionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionView.swift; sourceTree = "<group>"; };
+		5BF74DE427B1E8A800E60AA4 /* ConversionTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionTableViewDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +66,76 @@
 		5BF74DC227B1E5FC00E60AA4 /* NeneCoins */ = {
 			isa = PBXGroup;
 			children = (
+				5BF74DD927B1E74100E60AA4 /* Models */,
+				5BF74DD827B1E73C00E60AA4 /* Views */,
+				5BF74DD727B1E73300E60AA4 /* Controllers */,
 				5BF74DC327B1E5FC00E60AA4 /* AppDelegate.swift */,
 				5BF74DC527B1E5FC00E60AA4 /* SceneDelegate.swift */,
-				5BF74DC727B1E5FC00E60AA4 /* ViewController.swift */,
-				5BF74DC927B1E5FC00E60AA4 /* Main.storyboard */,
 				5BF74DCC27B1E5FE00E60AA4 /* Assets.xcassets */,
 				5BF74DCE27B1E5FE00E60AA4 /* LaunchScreen.storyboard */,
 				5BF74DD127B1E5FE00E60AA4 /* Info.plist */,
 			);
 			path = NeneCoins;
+			sourceTree = "<group>";
+		};
+		5BF74DD727B1E73300E60AA4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5BF74DE327B1E89100E60AA4 /* Datasources */,
+				5BF74DE227B1E88800E60AA4 /* ViewControllers */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5BF74DD827B1E73C00E60AA4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5BF74DE027B1E86E00E60AA4 /* ConversionView.swift */,
+				5BC3A0FA27B2948000613145 /* SelectionView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5BF74DD927B1E74100E60AA4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5BF74DDF27B1E78C00E60AA4 /* Repository */,
+				5BF74DDA27B1E74900E60AA4 /* Entities */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5BF74DDA27B1E74900E60AA4 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				5BF74DDB27B1E75400E60AA4 /* Coin.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		5BF74DDF27B1E78C00E60AA4 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				5BF74DDD27B1E78900E60AA4 /* CoinRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		5BF74DE227B1E88800E60AA4 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5BF74DC727B1E5FC00E60AA4 /* ConversionViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		5BF74DE327B1E89100E60AA4 /* Datasources */ = {
+			isa = PBXGroup;
+			children = (
+				5BF74DE427B1E8A800E60AA4 /* ConversionTableViewDataSource.swift */,
+				5BC3A0FC27B29C2E00613145 /* SelectionTableViewDataSource.swift */,
+			);
+			path = Datasources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +198,6 @@
 			files = (
 				5BF74DD027B1E5FE00E60AA4 /* LaunchScreen.storyboard in Resources */,
 				5BF74DCD27B1E5FE00E60AA4 /* Assets.xcassets in Resources */,
-				5BF74DCB27B1E5FC00E60AA4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +208,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BF74DC827B1E5FC00E60AA4 /* ViewController.swift in Sources */,
+				5BF74DE127B1E86E00E60AA4 /* ConversionView.swift in Sources */,
+				5BF74DC827B1E5FC00E60AA4 /* ConversionViewController.swift in Sources */,
 				5BF74DC427B1E5FC00E60AA4 /* AppDelegate.swift in Sources */,
+				5BF74DDE27B1E78900E60AA4 /* CoinRepository.swift in Sources */,
+				5BF74DDC27B1E75400E60AA4 /* Coin.swift in Sources */,
+				5BF74DE527B1E8A800E60AA4 /* ConversionTableViewDataSource.swift in Sources */,
 				5BF74DC627B1E5FC00E60AA4 /* SceneDelegate.swift in Sources */,
+				5BC3A0FD27B29C2E00613145 /* SelectionTableViewDataSource.swift in Sources */,
+				5BC3A0FB27B2948000613145 /* SelectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		5BF74DC927B1E5FC00E60AA4 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5BF74DCA27B1E5FC00E60AA4 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5BF74DCE27B1E5FE00E60AA4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -294,7 +362,6 @@
 				INFOPLIST_FILE = NeneCoins/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -306,7 +373,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -322,7 +389,6 @@
 				INFOPLIST_FILE = NeneCoins/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -334,7 +400,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

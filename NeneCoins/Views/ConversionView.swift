@@ -41,6 +41,7 @@ class ConversionView: UIView {
         tf.layer.cornerRadius = 10
         tf.backgroundColor = .secondarySystemBackground
         tf.leftViewMode = .always
+        tf.keyboardType = .decimalPad
         tf.placeholder = "3,14"
         
         return tf
@@ -77,12 +78,18 @@ class ConversionView: UIView {
         return label
     }()
     
+    weak var delegate: ConversionViewDelegate?
+    
     func setupViewBindings(dataSource: UITableViewDataSource) {
         coinsTableView.dataSource = dataSource
         inputTextField.delegate = self
+        invertButton.addTarget(self, action: #selector(didTypeInvert), for: .touchUpInside)
         //COLOCAR AQUI OUTRAS CONEXÕES DA VIEW
         
-        updateResultLabel(with: 2514, for: .init(name: "Rebeccoin", abbreviation: "RBC", conversionFactor: 12))
+    }
+    
+    func updateCoinsTable() {
+        coinsTableView.reloadData()
     }
     
     func updateInputLabel(with abbreviation: String) {
@@ -160,11 +167,25 @@ class ConversionView: UIView {
         
         NSLayoutConstraint.activate(resultLabelConstraints)
     }
+    
+    @objc
+    func didTypeInvert() {
+        delegate?.didTapInvert()
+    }
 }
 
 extension ConversionView: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        // VALIDAR ENTRADA E MANDAR PARA A VIEW CONTROLLER O RESULTADO JÁ LIMPO
+        
+        var text = textField.text ?? ""
+        text.append(string)
+        text = text.replacingOccurrences(of: ",", with: ".")
+        
+        if Double(text) == nil {
+            return false
+        }
+        
+        delegate?.didType(text)
         return true
     }
     

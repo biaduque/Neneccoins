@@ -19,6 +19,6 @@ class CoinRepository {
     
     func fetchInitialData() -> (fromCoin: Coin, toCoin: Coin) {
         (Coin(name: "IMPLEMENTAR FROM", abbreviation: "IMPLF", conversionFactor: 1),
-         Coin(name: "IMPLEMENTAR TO", abbreviation: "IMPLT", conversionFactor: 1))
+         Coin(name: "IMPLEMENTAR TO", abbreviation: "IMPLT", conversionFactor: 2))
     }
 }

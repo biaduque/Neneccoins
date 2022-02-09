@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5BA21BF627B431F20050ADE1 /* ConversionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA21BF527B431F20050ADE1 /* ConversionViewDelegate.swift */; };
 		5BC3A0FB27B2948000613145 /* SelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC3A0FA27B2948000613145 /* SelectionView.swift */; };
 		5BC3A0FD27B29C2E00613145 /* SelectionTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC3A0FC27B29C2E00613145 /* SelectionTableViewDataSource.swift */; };
 		5BF74DC427B1E5FC00E60AA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF74DC327B1E5FC00E60AA4 /* AppDelegate.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5BA21BF527B431F20050ADE1 /* ConversionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionViewDelegate.swift; sourceTree = "<group>"; };
 		5BC3A0FA27B2948000613145 /* SelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionView.swift; sourceTree = "<group>"; };
 		5BC3A0FC27B29C2E00613145 /* SelectionTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionTableViewDataSource.swift; sourceTree = "<group>"; };
 		5BF74DC027B1E5FC00E60AA4 /* NeneCoins.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NeneCoins.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +49,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5BA21BF427B431E00050ADE1 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				5BA21BF527B431F20050ADE1 /* ConversionViewDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
 		5BF74DB727B1E5FC00E60AA4 = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +76,7 @@
 		5BF74DC227B1E5FC00E60AA4 /* NeneCoins */ = {
 			isa = PBXGroup;
 			children = (
+				5BA21BF427B431E00050ADE1 /* Delegates */,
 				5BF74DD927B1E74100E60AA4 /* Models */,
 				5BF74DD827B1E73C00E60AA4 /* Views */,
 				5BF74DD727B1E73300E60AA4 /* Controllers */,
@@ -217,6 +228,7 @@
 				5BF74DC627B1E5FC00E60AA4 /* SceneDelegate.swift in Sources */,
 				5BC3A0FD27B29C2E00613145 /* SelectionTableViewDataSource.swift in Sources */,
 				5BC3A0FB27B2948000613145 /* SelectionView.swift in Sources */,
+				5BA21BF627B431F20050ADE1 /* ConversionViewDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

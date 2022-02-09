@@ -80,8 +80,9 @@ class ConversionView: UIView {
     
     weak var delegate: ConversionViewDelegate?
     
-    func setupViewBindings(dataSource: UITableViewDataSource) {
+    func setupViewBindings(dataSource: UITableViewDataSource, tableViewDelegate: UITableViewDelegate) {
         coinsTableView.dataSource = dataSource
+        coinsTableView.delegate = tableViewDelegate
         inputTextField.delegate = self
         invertButton.addTarget(self, action: #selector(didTypeInvert), for: .touchUpInside)
         //COLOCAR AQUI OUTRAS CONEXÕES DA VIEW

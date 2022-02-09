@@ -13,9 +13,9 @@ class ConversionViewController: UIViewController {
     
     init(fromCoin: Coin, toCoin: Coin) {
         self.contentView = ConversionView(frame: .zero)
-        self.dataSource = ConversionTableViewDataSource()
+        self.dataSource = ConversionTableViewDataSource(fromCoin: fromCoin, toCoin: toCoin)
+        
         super.init(nibName: nil, bundle: nil)
-        dataSource.startUp(with: [toCoin, fromCoin])
     }
     
     required init?(coder: NSCoder) {
@@ -29,7 +29,7 @@ class ConversionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationStyle()
-        contentView.setupViewBindings(dataSource: dataSource)
+        contentView.setupViewBindings(dataSource: dataSource, tableViewDelegate: self)
         contentView.delegate = self
     }
     
@@ -65,3 +65,9 @@ extension ConversionViewController: ConversionViewDelegate {
     }
 }
 
+extension ConversionViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectionViewController = SelectionViewController()
+        navigationController?.pushViewController(selectionViewController, animated: true)
+    }
+}

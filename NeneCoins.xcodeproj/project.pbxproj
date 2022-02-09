@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		139272BA27B44C1A002C4F09 /* SelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139272B927B44C1A002C4F09 /* SelectionViewController.swift */; };
+		139272BC27B4605E002C4F09 /* SelectionViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139272BB27B4605E002C4F09 /* SelectionViewControllerDelegate.swift */; };
 		5BA21BF627B431F20050ADE1 /* ConversionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA21BF527B431F20050ADE1 /* ConversionViewDelegate.swift */; };
 		5BC3A0FB27B2948000613145 /* SelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC3A0FA27B2948000613145 /* SelectionView.swift */; };
 		5BC3A0FD27B29C2E00613145 /* SelectionTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC3A0FC27B29C2E00613145 /* SelectionTableViewDataSource.swift */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		139272B927B44C1A002C4F09 /* SelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionViewController.swift; sourceTree = "<group>"; };
+		139272BB27B4605E002C4F09 /* SelectionViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionViewControllerDelegate.swift; sourceTree = "<group>"; };
 		5BA21BF527B431F20050ADE1 /* ConversionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionViewDelegate.swift; sourceTree = "<group>"; };
 		5BC3A0FA27B2948000613145 /* SelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionView.swift; sourceTree = "<group>"; };
 		5BC3A0FC27B29C2E00613145 /* SelectionTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionTableViewDataSource.swift; sourceTree = "<group>"; };
@@ -55,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				5BA21BF527B431F20050ADE1 /* ConversionViewDelegate.swift */,
+				139272BB27B4605E002C4F09 /* SelectionViewControllerDelegate.swift */,
 			);
 			path = Delegates;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 				5BF74DC827B1E5FC00E60AA4 /* ConversionViewController.swift in Sources */,
 				5BF74DC427B1E5FC00E60AA4 /* AppDelegate.swift in Sources */,
 				5BF74DDE27B1E78900E60AA4 /* CoinRepository.swift in Sources */,
+				139272BC27B4605E002C4F09 /* SelectionViewControllerDelegate.swift in Sources */,
 				5BF74DDC27B1E75400E60AA4 /* Coin.swift in Sources */,
 				139272BA27B44C1A002C4F09 /* SelectionViewController.swift in Sources */,
 				5BF74DE527B1E8A800E60AA4 /* ConversionTableViewDataSource.swift in Sources */,

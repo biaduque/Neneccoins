@@ -10,11 +10,12 @@ import UIKit
 class ConversionViewController: UIViewController {
     private var contentView: ConversionView
     private var dataSource: ConversionTableViewDataSource
+    private var selectedIndexPath: IndexPath?
     
     init(fromCoin: Coin, toCoin: Coin) {
         self.contentView = ConversionView(frame: .zero)
         self.dataSource = ConversionTableViewDataSource(fromCoin: fromCoin, toCoin: toCoin)
-        
+        self.selectedIndexPath = nil
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -68,6 +69,8 @@ extension ConversionViewController: ConversionViewDelegate {
 extension ConversionViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectionViewController = SelectionViewController(titulo: coinTitle(for: indexPath))
+        selectionViewController.delegate = self
+        self.selectedIndexPath = indexPath
         navigationController?.pushViewController(selectionViewController, animated: true)
     }
     
@@ -78,5 +81,12 @@ extension ConversionViewController: UITableViewDelegate {
         else{
             return "To"
         }
+    }
+}
+
+
+extension ConversionViewController: SelectionViewControllerDelegate{
+    func didSelect(coin: Coin) {
+        print("Oi")
     }
 }

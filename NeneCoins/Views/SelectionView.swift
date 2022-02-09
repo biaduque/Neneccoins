@@ -46,7 +46,7 @@ class SelectionView: UIView {
         NSLayoutConstraint.activate(selectionTableConstraints)
     }
     
-    func setupViewBindings(dataSource: UITableViewDataSource) {
+    func setupViewBindings(dataSource: UITableViewDataSource, tableViewDelegate: UITableViewDelegate) {
         selectionTable.dataSource = dataSource
     }
 }

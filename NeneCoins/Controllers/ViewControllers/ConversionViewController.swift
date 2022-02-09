@@ -67,7 +67,16 @@ extension ConversionViewController: ConversionViewDelegate {
 
 extension ConversionViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectionViewController = SelectionViewController()
+        let selectionViewController = SelectionViewController(titulo: coinTitle(for: indexPath))
         navigationController?.pushViewController(selectionViewController, animated: true)
+    }
+    
+    private func coinTitle(for indexPath: IndexPath) -> String{
+        if indexPath.row == 0 {
+            return "From"
+        }
+        else{
+            return "To"
+        }
     }
 }

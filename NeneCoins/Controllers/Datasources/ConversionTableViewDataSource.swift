@@ -45,4 +45,5 @@ class ConversionTableViewDataSource: NSObject, UITableViewDataSource {
             return "To: \(self.toCoin.name)"
         }
     }
+    
 }

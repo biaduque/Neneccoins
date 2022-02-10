@@ -12,13 +12,13 @@ class CoinRepository {
     static var shared: CoinRepository = CoinRepository()
     
     private var coins: [Coin] = [
-        Coin(name: "Rebeccoin", abbreviation: "RBC", conversionFactor: 12.51),
         Coin(name: "Real", abbreviation: "BRL", conversionFactor: 1),
-        Coin(name: "Bahiaccoin", abbreviation: "BHC", conversionFactor: 5.71),
-        Coin(name: "Carolcooin", abbreviation: "CLC", conversionFactor: 10.45),
-        Coin(name: "Chevisccoin", abbreviation: "CVC", conversionFactor: 9.14),
-        Coin(name: "Nathccoin", abbreviation: "NTC", conversionFactor: 10.13),
-        Coin(name: "Aleccoin", abbreviation: "ALE", conversionFactor: 7.20),
+        Coin(name: "Dólar", abbreviation: "$", conversionFactor: 5.23),
+        Coin(name: "Euro", abbreviation: "EUR", conversionFactor: 5.99),
+        Coin(name: "Bitcoin", abbreviation: "BTC", conversionFactor: 237050.08),
+        Coin(name: "Ethereum", abbreviation: "ETH", conversionFactor: 16792.13),
+        Coin(name: "Cardano", abbreviation: "ADA", conversionFactor: 6.24),
+        Coin(name: "Elrond", abbreviation: "EGLD", conversionFactor: 492.85),
 
     ]
     

@@ -93,8 +93,9 @@ class ConversionView: UIView {
         coinsTableView.reloadData()
     }
     
-    func updateInputLabel(with abbreviation: String) {
+    func updateInputLabel(with abbreviation: String, value: Double) {
         inputLabel.text = abbreviation
+        inputTextField.placeholder = String(value)
     }
     
     func updateResultLabel(with result: Double, for coin: Coin) {

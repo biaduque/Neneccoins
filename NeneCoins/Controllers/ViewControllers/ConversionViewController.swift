@@ -36,7 +36,7 @@ class ConversionViewController: UIViewController {
     }
     
     private func setupViewInitialState() {
-        contentView.updateInputLabel(with: dataSource.fromCoin.abbreviation)
+        contentView.updateInputLabel(with: dataSource.fromCoin.abbreviation, value: dataSource.fromCoin.conversionFactor)
         contentView.updateResultLabel(with: 0, for: dataSource.toCoin)
     }
     
@@ -60,6 +60,9 @@ extension ConversionViewController: ConversionViewDelegate {
     func didTapInvert() {
         dataSource.invertData()
         contentView.updateCoinsTable()
+        contentView.updateInputLabel(with: dataSource.fromCoin.abbreviation, value: dataSource.fromCoin.conversionFactor)
+        contentView.updateResultLabel(with: 0.0, for: dataSource.toCoin)
+
     }
     
     func didType(_ content: String) {
@@ -91,10 +94,16 @@ extension ConversionViewController: UITableViewDelegate {
 extension ConversionViewController: SelectionViewControllerDelegate {
     func didSelect(coin: Coin) {
         guard let indexPath = selectedIndexPath else { return }
+        
+        if indexPath.row == 0 {
+            contentView.updateInputLabel(with: coin.abbreviation, value: coin.conversionFactor)
+        }
+        else{
+            contentView.updateResultLabel(with: 0.0, for: coin)
+        }
+        
         dataSource.changeCoin(to: coin, at: indexPath)
         selectedIndexPath = nil
-        
-        contentView.updateInputLabel(with: coin.abbreviation)
         contentView.updateCoinsTable()
     }
 }

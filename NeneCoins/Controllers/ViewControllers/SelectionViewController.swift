@@ -41,6 +41,7 @@ class SelectionViewController: UIViewController {
 
 extension SelectionViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        /// PASSAMOS PARA A TELA ANTERIOR O CONTEUDO SELECIONADO NA TABELA DE ACORDO COM O CLIQUE DO USUARIO
         delegate?.didSelect(coin: dataSource.contentCoin[indexPath.row])
         navigationController?.popViewController(animated: true)
     }

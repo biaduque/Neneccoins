@@ -81,11 +81,12 @@ class ConversionView: UIView {
     weak var delegate: ConversionViewDelegate?
     
     func setupViewBindings(dataSource: UITableViewDataSource, tableViewDelegate: UITableViewDelegate) {
+        
+        /// AQUI COLOCAMOS AS CONEXOES DA VIEW
         coinsTableView.dataSource = dataSource
         inputTextField.delegate = self
         invertButton.addTarget(self, action: #selector(didTypeInvert), for: .touchUpInside)
         coinsTableView.delegate = tableViewDelegate
-        //COLOCAR AQUI OUTRAS CONEXÕES DA VIEW
         
     }
     
@@ -181,6 +182,8 @@ class ConversionView: UIView {
 
 extension ConversionView: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        /// CODIGO DE TRATAMENTO DE ERROS PARA QUE O INPUT DE NUMEROS/VALORES NAO SEJA INVALIDO
         var text = textField.text ?? ""
         
         if range.upperBound == range.lowerBound {

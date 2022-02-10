@@ -30,8 +30,11 @@ class ConversionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationStyle()
+        
+        /// IMPORTANTE LEMBRAR DE CONECTAR O DELEGATE DA TABELA
         contentView.setupViewBindings(dataSource: dataSource, tableViewDelegate: self)
         setupViewInitialState()
+        /// IMPORTANTE LEMBRAR DE CONECTADOR O DELEGATE DA CONTENT VIEW
         contentView.delegate = self
     }
     
@@ -57,6 +60,8 @@ class ConversionViewController: UIViewController {
 }
 
 extension ConversionViewController: ConversionViewDelegate {
+    
+    /// FUNCAO UTILIZADA PARA O BOTAO DE INVERT
     func didTapInvert() {
         dataSource.invertData()
         contentView.updateCoinsTable()
@@ -95,6 +100,7 @@ extension ConversionViewController: SelectionViewControllerDelegate {
     func didSelect(coin: Coin) {
         guard let indexPath = selectedIndexPath else { return }
         
+        /// ANALISA O INDEX PATH PARA MUDAR O QUE ESTA NA TELA DE ACORDO COM A SELECAO DO USUARIO
         if indexPath.row == 0 {
             contentView.updateInputLabel(with: coin.abbreviation, value: coin.conversionFactor)
         }

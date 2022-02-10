@@ -11,15 +11,23 @@ class ConversionTableViewDataSource: NSObject, UITableViewDataSource {
     var toCoin: Coin
     var fromCoin: Coin
     
-    init(fromCoin: Coin, toCoin: Coin){
-        self.toCoin = toCoin
+    init(fromCoin: Coin, toCoin: Coin) {
         self.fromCoin = fromCoin
+        self.toCoin = toCoin
     }
     
     func invertData() {
-        let previousTo = self.fromCoin
-        self.fromCoin = self.toCoin
-        self.toCoin = previousTo
+        let previousFrom = fromCoin
+        fromCoin = toCoin
+        toCoin = previousFrom
+    }
+    
+    func changeCoin(to coin: Coin, at indexPath: IndexPath) {
+        if indexPath.row == 0 {
+            fromCoin = coin
+        } else {
+            toCoin = coin
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -37,13 +45,12 @@ class ConversionTableViewDataSource: NSObject, UITableViewDataSource {
         cell.backgroundColor = .secondarySystemBackground
         return cell
     }
+    
     private func coin(for indexPath: IndexPath) -> String {
-        if indexPath.row == 0 {
-            return "From: \(self.fromCoin.name)"
-        }
-        else{
-            return "To: \(self.toCoin.name)"
+        if indexPath.row == 0  {
+            return "From: \(fromCoin.name)"
+        } else {
+            return "To: \(toCoin.name)"
         }
     }
-    
 }

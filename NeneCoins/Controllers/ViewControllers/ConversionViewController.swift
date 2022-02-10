@@ -31,7 +31,13 @@ class ConversionViewController: UIViewController {
         super.viewDidLoad()
         setupNavigationStyle()
         contentView.setupViewBindings(dataSource: dataSource, tableViewDelegate: self)
+        setupViewInitialState()
         contentView.delegate = self
+    }
+    
+    private func setupViewInitialState() {
+        contentView.updateInputLabel(with: dataSource.fromCoin.abbreviation)
+        contentView.updateResultLabel(with: 0, for: dataSource.toCoin)
     }
     
     private func setupNavigationStyle() {
@@ -54,7 +60,6 @@ extension ConversionViewController: ConversionViewDelegate {
     func didTapInvert() {
         dataSource.invertData()
         contentView.updateCoinsTable()
-        //ATUALIZAR TELA E DATASOURCE DA TABLE1VIEW
     }
     
     func didType(_ content: String) {
@@ -68,25 +73,28 @@ extension ConversionViewController: ConversionViewDelegate {
 
 extension ConversionViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectionViewController = SelectionViewController(titulo: coinTitle(for: indexPath))
+        let selectionViewController = SelectionViewController(title: selectionViewTitle(for: indexPath))
         selectionViewController.delegate = self
-        self.selectedIndexPath = indexPath
+        selectedIndexPath = indexPath
         navigationController?.pushViewController(selectionViewController, animated: true)
     }
     
-    private func coinTitle(for indexPath: IndexPath) -> String{
+    private func selectionViewTitle(for indexPath: IndexPath) -> String {
         if indexPath.row == 0 {
             return "From"
-        }
-        else{
+        } else {
             return "To"
         }
     }
-}
+ }
 
-
-extension ConversionViewController: SelectionViewControllerDelegate{
+extension ConversionViewController: SelectionViewControllerDelegate {
     func didSelect(coin: Coin) {
-        print("Oi")
+        guard let indexPath = selectedIndexPath else { return }
+        dataSource.changeCoin(to: coin, at: indexPath)
+        selectedIndexPath = nil
+        
+        contentView.updateInputLabel(with: coin.abbreviation)
+        contentView.updateCoinsTable()
     }
 }

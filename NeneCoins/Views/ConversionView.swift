@@ -82,9 +82,9 @@ class ConversionView: UIView {
     
     func setupViewBindings(dataSource: UITableViewDataSource, tableViewDelegate: UITableViewDelegate) {
         coinsTableView.dataSource = dataSource
-        coinsTableView.delegate = tableViewDelegate
         inputTextField.delegate = self
         invertButton.addTarget(self, action: #selector(didTypeInvert), for: .touchUpInside)
+        coinsTableView.delegate = tableViewDelegate
         //COLOCAR AQUI OUTRAS CONEXÕES DA VIEW
         
     }
@@ -113,6 +113,9 @@ class ConversionView: UIView {
         setupHierarchy()
         setupConstraints()
         backgroundColor = .systemBackground
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIView.endEditing))
+        tap.cancelsTouchesInView = false
+        self.addGestureRecognizer(tap)
     }
     
     required init?(coder: NSCoder) {
@@ -160,10 +163,10 @@ class ConversionView: UIView {
         NSLayoutConstraint.activate(textFieldConstraints)
         
         let resultLabelConstraints: [NSLayoutConstraint] = [
-            resultLabel.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -32),
             resultLabel.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 18),
             resultLabel.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -18),
-            resultLabel.topAnchor.constraint(equalTo: centerYAnchor, constant: 32)
+            resultLabel.topAnchor.constraint(equalTo: inputTextField.bottomAnchor, constant: 8),
+            resultLabel.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.3)
         ]
         
         NSLayoutConstraint.activate(resultLabelConstraints)
@@ -177,10 +180,20 @@ class ConversionView: UIView {
 
 extension ConversionView: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        
         var text = textField.text ?? ""
-        text.append(string)
+        
+        if range.upperBound == range.lowerBound {
+            text.append(string)
+        } else if range.upperBound > range.lowerBound {
+            text.removeLast()
+        }
+        
         text = text.replacingOccurrences(of: ",", with: ".")
+        
+        if text.isEmpty {
+            delegate?.didType("0")
+            return true
+        }
         
         if Double(text) == nil {
             return false

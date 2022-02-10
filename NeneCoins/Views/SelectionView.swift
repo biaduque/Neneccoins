@@ -5,6 +5,7 @@
 //  Created by Gabriel Ferreira de Carvalho on 08/02/22.
 //
 
+
 import Foundation
 import UIKit
 
@@ -48,5 +49,6 @@ class SelectionView: UIView {
     
     func setupViewBindings(dataSource: UITableViewDataSource, tableViewDelegate: UITableViewDelegate) {
         selectionTable.dataSource = dataSource
+        selectionTable.delegate = tableViewDelegate
     }
 }

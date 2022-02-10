@@ -2,7 +2,7 @@
 //  SelectionViewController.swift
 //  NeneCoins
 //
-//  Created by Beatriz Duque on 09/02/22.
+//  Created by Beatriz Duque 09/02/22.
 //
 
 import UIKit
@@ -13,11 +13,11 @@ class SelectionViewController: UIViewController {
     
     weak var delegate: SelectionViewControllerDelegate?
     
-    init(titulo: String){
+    init(title: String) {
         self.contentView = SelectionView()
         self.dataSource = SelectionTableViewDataSource(coins: CoinRepository.shared.fetchAllCoins())
         super.init(nibName: nil, bundle: nil)
-        title = titulo
+        self.title = title
     }
     
     required init?(coder: NSCoder) {
@@ -27,19 +27,21 @@ class SelectionViewController: UIViewController {
     override func loadView() {
         view = contentView
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupNavigationStyle()
-        contentView.setupViewBindings(dataSource: self.dataSource, tableViewDelegate: self)
+        contentView.setupViewBindings(dataSource: dataSource, tableViewDelegate: self)
     }
+    
     private func setupNavigationStyle() {
         navigationController?.navigationBar.prefersLargeTitles = true
     }
 
 }
 
-extension SelectionViewController: UITableViewDelegate{
+extension SelectionViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.navigationController?.popViewController(animated: true)
+        delegate?.didSelect(coin: dataSource.contentCoin[indexPath.row])
+        navigationController?.popViewController(animated: true)
     }
 }
